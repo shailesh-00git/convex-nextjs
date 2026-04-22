@@ -9,7 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@auth/core": "^0.37.4",
     "@base-ui/react": "^1.4.0",
+    "@convex-dev/auth": "^0.0.91",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -33,6 +35,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/react": "19.2.14",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",

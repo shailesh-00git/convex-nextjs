@@ -4,6 +4,8 @@ import {
   Source_Code_Pro,
 } from "next/font/google";
 import "./globals.css";
+import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
+import { ConvexClientProvider } from "@/components/convex-client-provider";
 
 const fontSans = Montserrat({
   subsets: ["latin"],
@@ -27,11 +29,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
+    <ConvexAuthNextjsServerProvider>
+      <html
+        lang="en"
+        className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} h-full antialiased min-h-[calc(100vh-2rem)] flex flex-col gap-4`}
+      >
+        <body className="min-h-full flex flex-col">
+          <ConvexClientProvider>
+            <main className="px-2 md:px-4 grow flex flex-col">{children}</main>
+          </ConvexClientProvider>
+        </body>
+      </html>
+    </ConvexAuthNextjsServerProvider>
   );
 }

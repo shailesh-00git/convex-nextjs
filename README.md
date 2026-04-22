@@ -24,3 +24,11 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 npm install convex
 npx convex dev
 ```
+
+## authentication
+```bash
+npm install @convex-dev/auth @auth/core
+
+```
+create a file inside the components
+--convex-client-provider.js
