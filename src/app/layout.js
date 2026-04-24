@@ -5,7 +5,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
-import { ConvexClientProvider } from "@/components/convex-client-provider";
+import { ConvexClientProvider } from "@/components/ConvexClientProvider";
 
 const fontSans = Montserrat({
   subsets: ["latin"],
